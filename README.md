@@ -49,6 +49,6 @@ Copy Link Berikut Ini Ke Browser : http://localhost:3000
 
 3. Setalah Login Maka Akan Di Tampilkan Halaman Home Yang Menampilkan List User Yang Sudah Terdaftar, Dan Bisa Melakukan Update User Dengan Klik Icon Pencil, Delete Untuk Menghapus Data User Dengan Klik Icon Sampah, Delete Semua User Dengan Melakukan Checklis Pada User Yang Ingin Di Hapus Lebih Dari 1 User, Jika Sudah Klik Tombol Hapus Semua User, Dan Juga Dapat Menambahkan User Dengan Klik Tombol Tambah Yang Terdapat Icon Plus.
 
-Berikut Link Demo Vercel        :
+Berikut Link Demo Vercel        : https://go-finance.vercel.app/login
 
 Berikut Link Repositori Github  : https://github.com/nurmuhamadsoleh/Go-Finance.git
