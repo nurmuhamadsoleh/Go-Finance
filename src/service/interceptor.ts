@@ -11,7 +11,6 @@ const instance = axios.create({
 });
 
 const requestFunction = async (config: any) => {
-  console.log("token", state?.auth?.token)
   const unAuthenticatedUrls = ["/register", "/login"];
 
   const filteredURL = unAuthenticatedUrls.find((str) => {
