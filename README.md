@@ -18,7 +18,9 @@
 
 5. Melakukan Cloning Atau Download Fomat .zip Repositori Github Berikut Link Repositori:
 
-    ![Repositori Go Finance ReactJS](https://github.com/risanussy/laundry-pos-api).
+    ![Repositori Go Finance ReactJS](https://example.com/path/to/image.png)
+    
+    [![An old rock in the desert](/assets/images/shiprock.jpg "Shiprock, New Mexico by Beau Rogers")](https://www.google.com/imgres?q=go%20finance&imgurl=https%3A%2F%2Fgofinance.com%2Flandingpage%2FImages%2FNew%2FGoFinance_Logo%2520Blue.png&imgrefurl=https%3A%2F%2Fgofinance.com%2Flandingpage%2FHome%2FAbout&docid=Eu-jdKHQpry39M&tbnid=3tBDtnAX-DQURM&vet=12ahUKEwj03fKXgcCIAxWjSGwGHXq2FZYQM3oECBgQAA..i&w=2444&h=809&hcb=2&ved=2ahUKEwj03fKXgcCIAxWjSGwGHXq2FZYQM3oECBgQAA)
 
 6. Ketik Perintah *git clone*
 https://github.com/nurmuhamadsoleh/Go-Finance
@@ -27,6 +29,7 @@ https://github.com/nurmuhamadsoleh/Go-Finance
  
 
 7. Masuk Kedalam Direktori Folder Go Finance Dengan Mengetik Perintah cd 
+    ![Direktori Folder Go Finance](https://prnt.sc/FjOISs__EeFT).
 
 8. Install node module kedalam project Go Finance Dengan Mengetik Perintah Berikut npm install
 
