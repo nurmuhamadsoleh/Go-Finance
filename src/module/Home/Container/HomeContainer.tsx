@@ -45,10 +45,8 @@ const {data: dataListUser, isFetching: isFetchingDataListUser, refetch: retechDa
     setPageSize(size)
   }
  const handleChangeGlobalFilter = (v: string) => {
-  const sanitizedValue = v.toLowerCase(); 
-  setPageQuery(sanitizedValue);
+  setPageQuery(v.toLowerCase());
 };
-  console.log("page query", pageQuery)
   useEffect(()=>{
     setPageIndex(1)
   }, [pageQuery])
@@ -66,7 +64,6 @@ const {data: dataListUser, isFetching: isFetchingDataListUser, refetch: retechDa
       return firstName.includes(pageQuery) || lastName.includes(pageQuery) || email.includes(pageQuery) || namaLengkap.includes(pageQuery);
     });
   }
-    console.log("cleanFiltered",  filtered)
     setFilteredUsers(filtered)
   },[dataListUser, pageQuery])
   const toggleRow = (id: any) => {
@@ -116,10 +113,9 @@ const {data: dataListUser, isFetching: isFetchingDataListUser, refetch: retechDa
       ),
     },
     {
-      header: <div className="text-center w-auto ">SELECT</div>,
+      header: <div className="text-left w-auto ">SELECT</div>,
       accessorKey: 'SELECT',
       enableSorting: false,
-      // centerHeader: true,
       cell: (row: any) => {
         return (
          <div className="w-1/6 text-center">
@@ -137,7 +133,6 @@ const {data: dataListUser, isFetching: isFetchingDataListUser, refetch: retechDa
       header: <div className="text-center w-auto  bg-red- ml-1">Panggilan</div>,
       accessorKey: `first_name`,
       enableSorting: true,
-      // centerHeader: false,
       cell: (row: any) => {
         const rowData = row?.row?.original
         return (
@@ -153,7 +148,6 @@ const {data: dataListUser, isFetching: isFetchingDataListUser, refetch: retechDa
       header: <div className="text-center w-auto -ml-8">Nama</div>,
       accessorKey: `last_name`,
       enableSorting: true,
-      // centerHeader: true,
       cell: (row: any) => {
         const rowData = row?.row?.original
         return (
@@ -184,7 +178,6 @@ const {data: dataListUser, isFetching: isFetchingDataListUser, refetch: retechDa
     {
       header: <div className="text-center w-auto -ml-4">Photo</div>,
       accessorKey: 'avatar',
-      // enableSorting: false,
       centerHeader: false,
       cell: (row: any) => {
         const rowData = row?.row?.original
@@ -199,9 +192,7 @@ const {data: dataListUser, isFetching: isFetchingDataListUser, refetch: retechDa
     {
       header: <div className="text-center  w-auto -ml-6">AKSI</div>,
       accessorKey: 'AKSI',
-      centerHeader: false,
-      // enableSorting: true,
-      cell: (row: any) => {
+      centerHeader: false,      cell: (row: any) => {
         const rowOriginal = row.row.original
         return (
               <div className="w-[6vw] -ml-6 flex flex-col gap-1 md:flex-row">

@@ -24,7 +24,7 @@ export default function RegisterComponent(props: IProps) {
           </Button>
         </div>
       </div>
-      <div className="bg-white w-full md:w-2/5 justify-center flex items-center  md:py-0">
+      <div className="bg-white w-full md:w-2/5 justify-center flex items-center md:py-0">
          <Form onSubmit={handleSubmit} subscription={{ values: false }} validate={RegisterValidation}>
             {(formProps) => {
               const { handleSubmit, invalid, dirty, form } = formProps;
@@ -34,7 +34,7 @@ export default function RegisterComponent(props: IProps) {
                 form.change('password', '')
               }
               return (
-                <div className="text-center md:text-left leading-none w-full max-w-md px-4">
+                <div className="text-center md:text-left leading-none w-full max-w-md px-0 md:px-4">
                   <FormANTD layout="vertical" onFinish={handleSubmit} className="pl-4">
                   <h1 className="text-black font-bold text-2xl md:text-3xl">Hello !</h1>
                   <p>Sign Up to Get Started</p>

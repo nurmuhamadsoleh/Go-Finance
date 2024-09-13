@@ -17,7 +17,7 @@ export default function LoginComponent(props: IProps) {
   const { handleSubmit, isLoading } = props;
   const router = useRouter()
   return (
-    <main className="h-auto w-full flex flex-col md:flex-row bg-yellow-500">
+    <main className="min-h-screen w-full flex flex-col md:flex-row">
       <div className="bg-blue-600 w-full md:w-3/5 flex items-center justify-center md:justify-start md:px-40 py-8 md:py-0">
         <div className="text-center px-0 md:text-left leading-none">
           <h1 className="font-bold text-5xl text-white">GoFinance</h1>
@@ -27,7 +27,7 @@ export default function LoginComponent(props: IProps) {
           </Button>
         </div>
       </div>
-      <div className="bg-white w-screen md:w-2/5 justify-center flex items-center md:py-0">
+      <div className="bg-white w-full md:w-2/5 justify-center flex items-center md:py-0">
          <Form onSubmit={handleSubmit} validate={LoginValidation}>
             {(formProps) => {
               const { handleSubmit, invalid, dirty, form } = formProps;
