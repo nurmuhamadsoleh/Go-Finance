@@ -12,6 +12,6 @@ html {
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .btn{
-  @apply text-white bg-blue-600 hover:bg-blue-700 focus:ring-blue-800 font-medium rounded-2xl text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800;
+  @apply text-white bg-[#0575E6] hover:bg-[#0575E6] focus:ring-[#0575E6] font-medium rounded-2xl text-sm px-5 py-2.5 text-center dark:bg-[#0575E6] dark:hover:bg-[#0575E6] dark:focus:ring-[#0575E6] border-2 border-[#0575E6];
 }
 

@@ -18,11 +18,11 @@ export default function LoginComponent(props: IProps) {
   const router = useRouter()
   return (
     <main className="min-h-screen w-full flex flex-col md:flex-row">
-      <div className="bg-blue-600 w-full md:w-3/5 flex items-center justify-center md:justify-start md:px-40 py-8 md:py-0">
+      <div className="bg-gradient-to-bl from-[#0575E6] via-[#02298A] to-[#021B79] w-full md:w-3/5 flex items-center justify-center md:justify-start md:px-40 py-8 md:py-0">
         <div className="text-center px-0 md:text-left leading-none">
           <h1 className="font-bold text-5xl text-white">GoFinance</h1>
           <p className="text-white text-2xl">Lorem ipsum dolor sit amet</p>
-          <Button className="btn" size="middle">
+          <Button className="btn" size="middle" onClick={()=> router.replace("/login")}>
             Read More
           </Button>
         </div>
@@ -36,11 +36,11 @@ export default function LoginComponent(props: IProps) {
                 form.change('password', '')
               }
               return (
-                <div className="text-center md:text-left leading-none w-full max-w-md px-0 md:px-4">
-                  <FormANTD layout="vertical" onFinish={handleSubmit} className="pl-4">
+                <div className="text-center md:text-left leading-none max-w-screen !px-0 md:px-4">
+                  <FormANTD layout="vertical" onFinish={handleSubmit} className="md:pl-4">
                     <h1 className="text-black font-bold text-2xl md:text-3xl">Hello Again !</h1>
                     <p>Welcome Back</p>
-                    <div className="pl-4">
+                    <div className="md:pl-4">
                       <div className="mt-8 md:mt-8">
                      <Field
                       name="username"
