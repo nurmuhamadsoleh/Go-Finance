@@ -132,7 +132,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>GoFinance</title>
       </Head>
-      <div className="light !m-0 !p-0 h-screen">
+      <main className="light !m-0 !p-0 h-screen">
         {isLoading && (
           <div className="fixed z-50 w-screen h-screen flex justify-center items-center bg-[#0575E6] opacity-95 duration-700 overflow-hidden">
             <PulseLoader color="white" className="m-auto" size={100} />
@@ -140,7 +140,7 @@ export default function App({ Component, pageProps }: AppProps) {
         )}
         {Root()}
         <ToastContainer />
-      </div>
+      </main>
     </QueryClientProvider>
   );
 }

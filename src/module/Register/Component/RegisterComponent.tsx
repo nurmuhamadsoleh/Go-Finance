@@ -17,7 +17,7 @@ export default function RegisterComponent(props: IProps) {
   const router = useRouter()
   return (
     <main className="min-h-screen w-full flex flex-col md:flex-row">
-      <div className="bg-gradient-to-bl from-[#0575E6] via-[#02298A] to-[#021B79] w-full md:w-3/5 flex items-center justify-center md:justify-start md:px-40 py-8 md:py-0">
+      <section className="bg-gradient-to-bl from-[#0575E6] via-[#02298A] to-[#021B79] w-full md:w-3/5 flex items-center justify-center md:justify-start md:px-40 py-8 md:py-0">
         <div className="text-center px-0 md:text-left leading-none">
           <h1 className="font-bold text-5xl text-white">GoFinance</h1>
           <p className="text-white text-2xl">Lorem ipsum dolor sit amet</p>
@@ -25,8 +25,8 @@ export default function RegisterComponent(props: IProps) {
             Read More
           </Button>
         </div>
-      </div>
-      <div className="bg-white w-full md:w-2/5 justify-center flex items-center md:py-0">
+      </section>
+      <section className="bg-white w-full md:w-2/5 justify-center flex items-center md:py-0">
          <Form onSubmit={handleSubmit} validate={RegisterValidation}>
             {(formProps) => {
               const { handleSubmit, invalid, dirty, form } = formProps;
@@ -93,7 +93,7 @@ export default function RegisterComponent(props: IProps) {
               );
             }}
           </Form>
-      </div>
+      </section>
     </main>
 
   );

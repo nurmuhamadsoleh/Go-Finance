@@ -12,8 +12,8 @@ export default function Template(props: IProps) {
   const { children } = props
   return (
     <>
-      <div className="bg-[#0571E1] text-white flex h-[60px] text-xl w-full justify-end gap-x-5">
-       <div className='w-52 md:w-64 flex justify-between  items-center  md:px-3  px-0'>
+      <header className="bg-[#0571E1] text-white flex h-[60px] text-xl w-full justify-end gap-x-5">
+       <nav className='w-52 md:w-64 flex justify-between  items-center  md:px-3  px-0'>
         <div>
           <UserOutlined className='text-3xl md:text-4xl' />
         </div>
@@ -25,8 +25,8 @@ export default function Template(props: IProps) {
             Admin  
           </span>        
         </div>
-       </div>
-      </div>
+       </nav>
+      </header>
       {children}
     </>
   )

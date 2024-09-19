@@ -23,12 +23,13 @@ export default function HomeComponent(props: IProps) {
   const { columnListUser, dataListUser, handleOpenModalUser, pageIndex, handlePaginatinServerSide, isLoadingTable, handleDeleteAllUser, selectedRows, handleChangeGlobalFilter } = props
   return (
     <>
-      <div className=' -mt-6'>
-        <div className="w-full mt-9">
+      <main className=' -mt-6'>
+        <section className="w-full mt-9">
           <div className="flex justify-end mr-2 mb-3 md:mb-1 gap-2">
              <Button icon={<UsergroupDeleteOutlined />} size="middle" type="default" className='bg-[#0571E1] text-white' onClick={handleDeleteAllUser} disabled={selectedRows?.length === 0 ?? false}>Hapus Semua</Button>
             <Button icon={<PlusOutlined />} size="middle" type="default" className='bg-[#0571E1] text-white' onClick={handleOpenModalUser}>Tambah</Button>
           </div>
+          <section>
             <Table columns={columnListUser} 
             dataSource={dataListUser || []} 
             serverSide
@@ -47,9 +48,10 @@ export default function HomeComponent(props: IProps) {
             tdTable={'!py-0'}
             bodyTable={'!text-[12px]'}
             />
-        </div>  
+          </section>
+        </section>  
         
-      </div>
+      </main>
     </>
   )
 }
