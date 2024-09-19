@@ -48,9 +48,6 @@ const {data: dataListUser, isFetching: isFetchingDataListUser, refetch: retechDa
   setPageQuery(v.toLowerCase());
 };
   useEffect(()=>{
-    setPageIndex(1)
-  }, [pageQuery])
-  useEffect(()=>{
     let filtered:any;
   if (pageQuery === "") {
     filtered = dataListUser?.data;
@@ -60,7 +57,6 @@ const {data: dataListUser, isFetching: isFetchingDataListUser, refetch: retechDa
       const lastName = item?.last_name?.toLowerCase().replace(/ /g, '') || "";
        const namaLengkap = `${firstName} ${lastName}`.toLowerCase().replace(/ /g, '') || ""
       const email = item?.email?.toLowerCase().replace(/ /g, '') || "";
-      
       return firstName.includes(pageQuery) || lastName.includes(pageQuery) || email.includes(pageQuery) || namaLengkap.includes(pageQuery);
     });
   }
@@ -220,7 +216,7 @@ const {data: dataListUser, isFetching: isFetchingDataListUser, refetch: retechDa
   ]
   return (
     <>
-    <HomeComponent handleChangeGlobalFilter={handleChangeGlobalFilter} handleDeleteAllUser={handleAllDelete} selectedRows={selectedRows} isLoadingTable={isFetchingDataListUser} handlePaginatinServerSide={handlePaginationServerSide} pageIndex={pageIndex} columnListUser={columnHeaderPending} dataListUser={filteredUsers} handleOpenModalUser={handleOpenUser}/>
+    <HomeComponent filteredUsers={filteredUsers} handleChangeGlobalFilter={handleChangeGlobalFilter} handleDeleteAllUser={handleAllDelete} selectedRows={selectedRows} isLoadingTable={isFetchingDataListUser} handlePaginatinServerSide={handlePaginationServerSide} pageIndex={pageIndex} columnListUser={columnHeaderPending} dataListUser={dataListUser} handleOpenModalUser={handleOpenUser}/>
     {modalUser && (
       <ModalAddUserContainer initialValues={initialValues} onClose={() => {
         retechDataListUser() 

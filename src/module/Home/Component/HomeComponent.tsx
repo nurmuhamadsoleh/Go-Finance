@@ -11,6 +11,7 @@ import Table from 'component/Table'
 interface IProps{
   columnListUser: any[]
   dataListUser?: IListUserDAO | any
+  filteredUsers?: IListUserDAO | any
   handleOpenModalUser: () => void;
   pageIndex:number;
   handlePaginatinServerSide: (_index: number, _size: number) => void;
@@ -20,7 +21,7 @@ interface IProps{
   selectedRows: any[]
 }
 export default function HomeComponent(props: IProps) {
-  const { columnListUser, dataListUser, handleOpenModalUser, pageIndex, handlePaginatinServerSide, isLoadingTable, handleDeleteAllUser, selectedRows, handleChangeGlobalFilter } = props
+  const { columnListUser, dataListUser, handleOpenModalUser, pageIndex, handlePaginatinServerSide, isLoadingTable, handleDeleteAllUser, selectedRows, handleChangeGlobalFilter, filteredUsers } = props
   return (
     <>
       <main className=' -mt-6'>
@@ -31,7 +32,7 @@ export default function HomeComponent(props: IProps) {
           </div>
           <section>
             <Table columns={columnListUser} 
-            dataSource={dataListUser || []} 
+            dataSource={filteredUsers || []} 
             serverSide
             isLoading={isLoadingTable}
             fixedHeader 
@@ -43,7 +44,7 @@ export default function HomeComponent(props: IProps) {
             pageIndex={pageIndex - 1} 
             totalData={dataListUser? parseInt(dataListUser?.total, 10) : 0} 
             // className="w-auto md:w-screen"
-            height="h-[75vh] md:h-[63vh]"
+            height="h-[78vh] md:h-[63vh]"
             thTable={'!py-0'}
             tdTable={'!py-0'}
             bodyTable={'!text-[12px]'}
